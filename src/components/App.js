@@ -5,14 +5,14 @@ import './App.css';
 
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
-import {addOne} from './../actions';
+import {applyNumber} from './../actions';
 
 function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const handleClickOne = () => {
-    dispatch(addOne());
+  const handleClickNumber = (number) => {
+    dispatch(applyNumber(number));
   }
 
   return (
@@ -38,21 +38,21 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={1} onClick={handleClickOne}/>
-              <CalcButton value={2}/>
-              <CalcButton value={3}/>
+              <CalcButton value={1} onClick={()=>handleClickNumber(1)}/>
+              <CalcButton value={2} onClick={()=>handleClickNumber(2)}/>
+              <CalcButton value={3} onClick={()=>handleClickNumber(3)}/>
             </div>
 
             <div className="row">
-              <CalcButton value={4}/>
-              <CalcButton value={5}/>
-              <CalcButton value={6}/>
+              <CalcButton value={4} onClick={()=>handleClickNumber(4)}/>
+              <CalcButton value={5} onClick={()=>handleClickNumber(5)}/>
+              <CalcButton value={6} onClick={()=>handleClickNumber(6)}/>
             </div>
 
             <div className="row">
-              <CalcButton value={7}/>
-              <CalcButton value={8}/>
-              <CalcButton value={9}/>
+              <CalcButton value={7} onClick={()=>handleClickNumber(7)}/>
+              <CalcButton value={8} onClick={()=>handleClickNumber(8)}/>
+              <CalcButton value={9} onClick={()=>handleClickNumber(9)}/>
             </div>
 
             <div className="row">
