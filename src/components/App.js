@@ -23,6 +23,18 @@ function App() {
     dispatch(clearDisplay());
   }
 
+  const handleMemorySetClick = () => {
+    dispatch(memorySet());
+  }
+
+  const handleMemoryAppliedClick = () => {
+    dispatch(memoryApplied());
+  }
+
+  const handleMemoryResetClick = () => {
+    dispatch(memoryReset());
+  }
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -40,9 +52,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"M+"} onClick={()=>handleMemorySetClick()}/>
+              <CalcButton value={"MR"} onClick={()=>handleMemoryAppliedClick()}/>
+              <CalcButton value={"MC"} onClick={()=>handleMemoryResetClick()}/>
             </div>
 
             <div className="row">

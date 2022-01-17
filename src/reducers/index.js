@@ -52,7 +52,7 @@ const reducer = (state, action) => {
         case('MR'):
             return({
                 ...state,
-                total: calculateResult(stat.total, state.memory, state.operation)
+                total: calculateResult(state.total, state.memory, state.operation)
             });
 
         case('MC'):
