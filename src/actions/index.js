@@ -18,3 +18,15 @@ export const changeOperation = (operator) => {
 export const clearDisplay = () => {
     return({type: CLEAR_DISPLAY})
 }
+
+export const memorySet = () => {
+    return({type: 'M+'}) 
+}
+
+export const memoryApplied = () => {
+    return({type: 'MR'})
+}
+
+export const memoryReset = () => {
+    return({type: 'MC'})
+}

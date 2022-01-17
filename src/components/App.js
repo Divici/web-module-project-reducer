@@ -5,7 +5,7 @@ import './App.css';
 
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
-import {applyNumber, changeOperation, clearDisplay} from './../actions';
+import {applyNumber, changeOperation, clearDisplay, memorySet, memoryApplied, memoryReset} from './../actions';
 
 function App() {
 

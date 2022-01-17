@@ -42,6 +42,24 @@ const reducer = (state, action) => {
                 ...state,
                 total: 0
             });
+
+        case('M+'):
+            return({
+                ...state,
+                memory: state.total
+            });
+
+        case('MR'):
+            return({
+                ...state,
+                total: calculateResult(stat.total, state.memory, state.operation)
+            });
+
+        case('MC'):
+            return({
+                ...state,
+                memory: 0
+            });
             
         default:
             return state;
